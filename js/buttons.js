@@ -7,5 +7,5 @@ document.getElementById("optionsButton").onclick = function() {
 };
 
 document.getElementById("exitButton").onclick = function() {
-  location.href = "../menu.html";
+  location.href = "../index.html";
 };

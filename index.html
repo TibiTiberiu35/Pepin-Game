@@ -13,15 +13,30 @@
         <button id="playButton">
           <h1>Play</h1>
         </button>
-        <button id="optionsButton">
+        <div class="container">
           <h1>Options</h1>
-        </button>
+          <div class="music">
+            <p>Music:</p>
+            <input
+              type="checkbox"
+              id="pauseBtn"
+              class="switch"
+              onclick="pause()"
+              checked
+            />
+          </div>
+          <div class="music">
+            <p>Effects:</p>
+            <input type="checkbox" class="switch" checked />
+          </div>
+        </div>
         <button id="exitButton">
           <h1>Exit</h1>
         </button>
       </div>
     </div>
 
+    <script src="./js/music.js"></script>
     <script src="./js/buttons.js"></script>
   </body>
 </html>

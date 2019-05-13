@@ -22,6 +22,7 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   /* border: 2px solid #b61414;
   border-radius: 10px; */
+  filter: grayscale(0.4);
 }
 
 #menuScreen .buttonsContainer {
@@ -37,7 +38,7 @@ body {
   border-radius: 5px;
   text-align: center;
   /* background: url("../img/plank.png") no-repeat center center / contain; */
-  background: rgba(30, 30, 30, 0.7);
+  background: rgba(30, 30, 30, 0.6);
   transition: 0.5s;
   color: #a1a1a1;
   text-decoration: none;
@@ -48,12 +49,12 @@ body {
 }
 
 #menuScreen button:hover {
-  transform: rotate(5deg) scale(1.1);
+  transform: rotate(-2deg) scale(1.1);
   transition: 0.5s;
 }
 
-#menuScreen button:nth-child(odd):hover {
-  transform: rotate(-5deg) scale(1.1);
+#menuScreen button:nth-child(3):hover {
+  transform: rotate(2deg) scale(1.1);
 }
 
 .container {
@@ -62,26 +63,36 @@ body {
   padding: 0 40px;
   border-radius: 5px;
   border: 2px solid #1d1c1c;
+  transition: 0.5s;
+  cursor: context-menu;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.container h1 {
+  color: #a1a1a1;
+  font-size: 32px;
+  text-align: center;
 }
 
 .music {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100px;
+  justify-content: space-around;
+  height: 70px;
   width: 100%;
-  font-size: 30px;
+  font-size: 22px;
   color: #a1a1a1;
-}
-
-.music input {
-  margin-left: auto;
 }
 
 .switch {
   position: relative;
-  width: 60px;
-  height: 32px;
+  width: 50px;
+  height: 25px;
   background: #ccc;
   appearance: none;
   -webkit-appearance: none;
@@ -100,9 +111,9 @@ body {
 .switch::before {
   content: "";
   position: absolute;
-  width: 32px;
-  height: 32px;
-  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
   top: 0;
   left: 0;
   background: #666;
@@ -112,6 +123,10 @@ body {
 }
 
 .switch:checked::before {
-  left: 30px;
+  left: 25px;
   background: #222;
+}
+
+.switch:hover {
+  cursor: pointer;
 }

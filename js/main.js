@@ -3,7 +3,31 @@ const Player = function(x, y) {
   this.y = y;
 };
 
-var scaled_size = 80;
+Player.prototype = {
+
+  moveTo:function(x,y) {
+    this.x = x;
+    this.y = y;
+  }
+
+};
+
+const Viewport = function(x, y, w, h){
+  this.x = x;
+  this.y = y;
+  this.w = w; 
+  this.h = h;
+};
+
+Viewport.prototype = {
+  scrollTo:function(x,y) {
+    this.x = x - this.w / 2;
+    this.y = y - this.h / 2;
+  }
+};
+
+// Variables for the map
+var scaled_size = 90;
 var sprite_size = 16;
 var columns = 100;
 var rows = 100;
@@ -12,8 +36,12 @@ var map = [418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418, 418,
 var context = document.querySelector("canvas").getContext("2d");
 var height = document.documentElement.clientHeight;
 var width = document.documentElement.clientWidth;
-var player = new Player(100, 100);
 
+var pointer = { x:700, y:300};
+var player = new Player(pointer.x, pointer.y);
+var viewport = new Viewport( 0, 0, width, height);
+
+// Create map
 function loop() {
   window.requestAnimationFrame(loop);
 
@@ -24,11 +52,19 @@ function loop() {
 
   context.imageSmoothingEnabled = false;
 
-  for (let x = 0; x < columns; x++) {
-    for (let y = 0; y < rows; y++) {
+  player.moveTo(pointer.x, pointer.y);
+  viewport.scrollTo(player.x,player.y);
+
+  var x_min = Math.floor(viewport.x / scaled_size);
+  var y_min = Math.floor(viewport.y / scaled_size);
+  var x_max = Math.ceil((viewport.x + viewport.w) / scaled_size);
+  var y_max = Math.ceil((viewport.y + viewport.h) / scaled_size);
+
+  for (let x = x_min; x < x_max; x++) {
+    for (let y = y_min; y < y_max; y++) {
       let value = map[y * columns + x];
-      let tile_x = x * scaled_size;
-      let tile_y = y * scaled_size;
+      let tile_x = Math.floor(x * scaled_size - viewport.x + width / 2 - viewport.w / 2);
+      let tile_y = Math.floor(y * scaled_size - viewport.y + height / 2 - viewport.h / 2);
 
       switch (value) {
         case 120:
@@ -79,7 +115,9 @@ function loop() {
       );
     }
   }
-  context.drawImage(tile_sheet, 180, 180, 20, 20, player.x, player.y, 90, 90);
+
+  context.drawImage(tile_sheet, 180, 180, 20, 20, Math.round(player.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(player.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
+  // context.drawImage(tile_sheet, 64, 0, sprite_size, sprite_size, Math.round(player.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(player.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
 }
 
 var tile_sheet = new Image();
@@ -87,3 +125,16 @@ tile_sheet.addEventListener("load", () => {
   loop();
 });
 tile_sheet.src = "../img/dungeon_tiles.png";
+
+// Movement
+document.addEventListener("keydown",(e)=>{
+  if (e.keyCode === 37 || e.keyCode === 65) {
+    pointer.x -= 10;
+  } if (e.keyCode === 38 || e.keyCode === 87) {
+    pointer.y -= 10;
+  } if (e.keyCode === 39 || e.keyCode === 68) {
+    pointer.x += 10;
+  } if (e.keyCode === 40 || e.keyCode === 83) {
+    pointer.y += 10;
+  } 
+});

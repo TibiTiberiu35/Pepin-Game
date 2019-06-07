@@ -97,15 +97,15 @@ var width = document.documentElement.clientWidth;
 
 var pointer = { x:200, y:200};
 var enemySpeed = { x1:-1, y1:1, x2:1, y2:-1, x3:1, y3:1, x4:-2, y4:2, x5:2, y5:2, x6:2, y6:-2, x7:-3, y7:3, x8:3, y8:3, x9:3, y9:-3};
-var enemy1 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height)};
-var enemy2 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height)};
-var enemy3 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height)};
-var enemy4 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height)};
-var enemy5 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height)};
-var enemy6 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height)};
-var enemy7 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height)};
-var enemy8 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height)};
-var enemy9 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height)};
+var enemy1 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height) + 400};
+var enemy2 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height) + 400};
+var enemy3 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height) + 400};
+var enemy4 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height) + 400};
+var enemy5 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height) + 400};
+var enemy6 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height) + 400};
+var enemy7 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height) + 400};
+var enemy8 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height) + 400};
+var enemy9 = { x:Math.floor(Math.random() * width), y: Math.floor(Math.random() * height) + 400};
 var player = new Player(pointer.x, pointer.y);
 var viewport = new Viewport( 0, 0, width, height);
 
@@ -204,20 +204,18 @@ function loop() {
       );
     }
   }
-
   
   context.drawImage(tile_sheet, 180, 180, 20, 20, Math.round(player.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(player.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
 
-
-  context.drawImage(tile_sheet, 204, 180, 20, 20, Math.round(enemy1.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(enemy1.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
-  context.drawImage(tile_sheet, 204, 180, 20, 20, Math.round(enemy2.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(enemy2.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
-  context.drawImage(tile_sheet, 204, 180, 20, 20, Math.round(enemy3.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(enemy3.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
-  context.drawImage(tile_sheet, 195, 160, 20, 20, Math.round(enemy4.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(enemy4.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
-  context.drawImage(tile_sheet, 195, 160, 20, 20, Math.round(enemy5.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(enemy5.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
-  context.drawImage(tile_sheet, 195, 160, 20, 20, Math.round(enemy6.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(enemy6.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
-  context.drawImage(tile_sheet, 217, 160, 20, 20, Math.round(enemy7.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(enemy7.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
-  context.drawImage(tile_sheet, 217, 160, 20, 20, Math.round(enemy8.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(enemy8.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
-  context.drawImage(tile_sheet, 217, 160, 20, 20, Math.round(enemy9.x - viewport.x + width * 0.5 - viewport.w * 0.5), Math.round(enemy9.y - viewport.y + height * 0.5 - viewport.h * 0.5), scaled_size, scaled_size);
+  context.drawImage(tile_sheet, 204, 180, 20, 20, Math.round(enemy1.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(enemy1.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
+  context.drawImage(tile_sheet, 204, 180, 20, 20, Math.round(enemy2.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(enemy2.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
+  context.drawImage(tile_sheet, 204, 180, 20, 20, Math.round(enemy3.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(enemy3.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
+  context.drawImage(tile_sheet, 195, 160, 20, 20, Math.round(enemy4.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(enemy4.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
+  context.drawImage(tile_sheet, 195, 160, 20, 20, Math.round(enemy5.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(enemy5.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
+  context.drawImage(tile_sheet, 195, 160, 20, 20, Math.round(enemy6.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(enemy6.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
+  context.drawImage(tile_sheet, 217, 160, 20, 20, Math.round(enemy7.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(enemy7.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
+  context.drawImage(tile_sheet, 217, 160, 20, 20, Math.round(enemy8.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(enemy8.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
+  context.drawImage(tile_sheet, 217, 160, 20, 20, Math.round(enemy9.x - viewport.x + width / 2 - viewport.w / 2 - scaled_size / 2), Math.round(enemy9.y - viewport.y + height / 2 - viewport.h / 2 - scaled_size / 2), scaled_size, scaled_size);
 
   enemy1.x += enemySpeed.x1;
   enemy1.y += enemySpeed.y1;
@@ -335,6 +333,26 @@ function loop() {
   }else if(enemy9.y >= scaled_size * 37 - 30){
     enemySpeed.y9 = -3;
   }
+
+  if(player.x - 28 < enemy1.x + 28 && player.x + 28 > enemy1.x - 28 && player.y - 28 < enemy1.y + 28  && player.y + 28 > enemy1.y - 28){
+    window.location.replace("../index.html");
+  } if(player.x - 28 < enemy2.x + 28 && player.x + 28 > enemy2.x - 28 && player.y - 28 < enemy2.y + 28  && player.y + 28 > enemy2.y - 28){
+    window.location.replace("../index.html");
+  } if(player.x - 28 < enemy3.x + 28 && player.x + 28 > enemy3.x - 28 && player.y - 28 < enemy3.y + 28  && player.y + 28 > enemy3.y - 28){
+    window.location.replace("../index.html");
+  } if(player.x - 28 < enemy4.x + 28 && player.x + 28 > enemy4.x - 28 && player.y - 28 < enemy4.y + 28  && player.y + 28 > enemy4.y - 28){
+    window.location.replace("../index.html");
+  } if(player.x - 28 < enemy5.x + 28 && player.x + 28 > enemy5.x - 28 && player.y - 28 < enemy5.y + 28  && player.y + 28 > enemy5.y - 28){
+    window.location.replace("../index.html");
+  } if(player.x - 28 < enemy6.x + 28 && player.x + 28 > enemy6.x - 28 && player.y - 28 < enemy6.y + 28  && player.y + 28 > enemy6.y - 28){
+    window.location.replace("../index.html");
+  } if(player.x - 28 < enemy7.x + 28 && player.x + 28 > enemy7.x - 28 && player.y - 28 < enemy7.y + 28  && player.y + 28 > enemy7.y - 28){
+    window.location.replace("../index.html");
+  } if(player.x - 28 < enemy8.x + 28 && player.x + 28 > enemy8.x - 28 && player.y - 28 < enemy8.y + 28  && player.y + 28 > enemy8.y - 28){
+    window.location.replace("../index.html");
+  } if(player.x - 28 < enemy9.x + 28 && player.x + 28 > enemy9.x - 28 && player.y - 28 < enemy9.y + 28  && player.y + 28 > enemy9.y - 28){
+    window.location.replace("../index.html");
+  }
 }
 
 var tile_sheet = new Image();
@@ -365,3 +383,4 @@ document.addEventListener("keydown",(e)=>{
       pointer.y += 10;
   } 
 });
+

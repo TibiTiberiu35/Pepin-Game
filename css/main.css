@@ -8,7 +8,7 @@ body {
   width: 100%;
   position: relative;
   margin: 0;
-  background: #555;
+  background: rgb(62, 65, 78);
 }
 
 #screen {

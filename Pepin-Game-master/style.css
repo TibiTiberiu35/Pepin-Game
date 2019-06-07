@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border: 2px solid black;
+  }
+  
+  .navbar li {
+    float: right;
+    border: 2px solid black;
+  }
+  
+  .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  
+  .navbar li a:hover {
+    background-color: rgb(87, 3, 3);
+  }
+
+  .titlu h1{
+      font-size: 25rem;
+      color: rgb(29, 15, 7);
+      text-shadow: 10px 10px 10px red, -10px -10px 10px red;
+      margin:0px;
+      padding: 0px;
+ 
+  }
+
+  .titlu{
+    width: 50%;
+    margin: 0 auto;
+    font-family: Dungrg;
+    margin-top: 23rem;
+  }
+  
+  .titlu .pepin{
+      text-align: center;
+  }
+
+  .container2{
+      height: 100%;
+      text-align: center;
+      width: 100%;
+      margin:auto;
+  }
+  .carousel-inner img {
+    height: 55rem;
+    width: 38rem;
+    max-width:100%;
+
+  }
+
+  #info1{
+    height: 55rem;
+    width: 38rem;
+    margin-left: 6rem;
+}
+  #info2{
+    height: 55rem;
+    width: 38rem;
+    margin-left: 6rem;
+}
+
+.carousel-inner{
+  height: 55rem;
+  width: 38rem;
+}
+
+.info{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 24px;
+}
+
+
+
+.info .infotitle{
+    color:white;
+    font-family: Dungrg;
+    font-size: 70px;
+    text-shadow: 1px 1px 10px red, -1px -1px 10px red;
+    margin-bottom: 7rem;
+}
+
+.info .infotext{
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 34px;
+}
+
+.container2 #info1{
+  display: inline-block;
+  margin: auto;
+  margin-top: 15%;
+
+}
+.container2 #info2{
+  display: inline-block;
+  margin-top: 15%;
+}
+
+.bg1{
+  width:100%;
+  height: 20rem;
+  min-height:100vh;
+  background-image:url("./images/wallpaper.jpg");
+}
+.bg2{
+  width:100%;
+  min-height:100vh;
+  background-image:url("./images/wallpaper2.jpg");
+}
+
+.container{
+  margin:0;
+  padding: 0;
+}
+.modal-content{
+  background-image: url("https://media.giphy.com/media/KeL04ZmYXMrz2w8gb1/giphy.gif");
+  background-size: 100%;
+}
+  
+
+@font-face
+{ 
+  font-family: Dungrg; src: url('DUNGRG__.TTF'); 
+} 
+@media screen and (max-width : 1600px) { 
+  .titlu h1{ font-size: 20rem; }
+  .navbar li a{
+    font-size: 20px;
+  }
+  .bg1{
+    background-size: 100%;
+  }
+  body{
+    margin:0;
+  }
+}
+
+@media screen and (max-width : 1320px) { 
+  .titlu h1{ font-size: 17rem; }
+  .navbar li a{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width : 960px) { 
+  .titlu h1{ font-size: 15rem; }
+  .navbar li a{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width : 830px) { 
+  .titlu h1{ font-size: 15rem; }
+  .navbar li a{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width : 840px) { 
+  #info1{
+    height: 80rem;
+    width: 30rem;
+  }
+  #info2{
+    height: 80rem;
+    width: 30rem;
+  }
+  .carousel-inner img {
+    height: 80rem;
+    width: 30rem;
+  }
+  .carousel-inner{
+    height: 80rem;
+    width: 30rem;
+  }
+
+}
+
+@media screen and (max-width : 666px) { 
+  #info1{
+    height: 60rem;
+    width: 25rem;
+  }
+  #info2{
+    height: 60rem;
+    width: 25rem;
+  }
+  .carousel-inner img {
+    height: 60rem;
+    width: 25rem;
+    max-width:100%;
+  }
+
+  .carousel-inner{
+    height: 40rem;
+    width: 30rem;
+  }
+
+}
+
+@media screen and (max-width : 480px) { 
+  .titlu h1{ font-size: 6rem; }
+  .navbar li a{
+    font-size: 5px;
+  }
+  #info1{
+    height: 50rem;
+    width: 10rem;
+  }
+  #info2{
+    height: 50rem;
+    width: 10rem;
+  }
+  
+}

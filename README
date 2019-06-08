@@ -1,0 +1,20 @@
+!!! IN ORDER TO RUN THE GAME OPEN IT WITH A LOCAL SERVER !!!
+For example you can use:
+  === Live Server  extension for Visual Studio Code (recommended) --- "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" ===
+  === XAMPP --- https://www.apachefriends.org/ro/index.html ===
+  === WampServer --- http://www.wampserver.com/ ===
+
+Version: 0.2
+
+GitHub repository: 
+===== https://github.com/TibiTiberiu35/Pepin-Game =====
+
+Contributors:
+===== Oprescu Robert Constantin - https://github.com/RobyRbb =====
+===== Boșcan Tiberiu-Ioan - https://github.com/TibiTiberiu35 =====
+===== Stanciu Andrei Cristian - https://github.com/puya2003205 ===== 
+
+News: 
+  + Added an EASTER EGG. Play and try to find it.
+  + Added README.md.
+  + Fixed bugs.

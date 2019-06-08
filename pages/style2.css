@@ -139,10 +139,73 @@ body{
     border-right: 3px solid #E65634;
 }
 
+.mphoto{
+    height: 200px; 
+    width: 200px;
+}
 
+.cphoto{
+    height: 50px; 
+    width: 50px; 
+    margin-right: 4px;
+}
 
 
 
 @font-face{ 
     font-family: Dungrg; src: url('../DUNGRG__.TTF'); 
 } 
+
+
+@media screen and (max-width : 1345px) { 
+    .cinfo strong{
+        font-size: 14px;
+    }
+    .membru em{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width : 415px) { 
+    .cinfo strong{
+        font-size: 7px;
+    }
+    .membru em{
+        font-size: 30px;
+    }
+    ul li .cphoto{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width : 720px) { 
+    .members h1 img{
+        width: 150px;
+        height: 150px;
+    }
+    .mname{
+        font-size: 50px;
+    }
+    .citat{
+        font-size: 14px;
+    }
+    .minfo{
+        font-size: 12px;
+    }
+}
+
+  @media screen and (max-width : 480px) { 
+    .members h1 img{
+        width: 120px;
+        height: 120px;
+    }
+    .mname{
+        font-size: 50px;
+    }
+    .citat{
+        font-size: 12px;
+    }
+    .minfo{
+        font-size: 10px;
+    }
+}

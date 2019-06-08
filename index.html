@@ -18,9 +18,9 @@
 <body>
   <div class="bg1">
     <ul class="navbar">
-      <li><a href="./pages/noutati.html">Noutati</a></li>
-      <li><a href="./pages/contact.html">Contact</a></li>
-      <li>
+      <li class="navitem"><a href="./pages/noutati.html" class="navbutton">Noutati</a></li>
+      <li class="navitem"><a href="./pages/contact.html" class="navbutton">Contact</a></li>
+      <li class="navitem">
         <div class="row">
           <div class="col-md-12">
             <div class="modal fade" id="myModal2">
@@ -30,41 +30,19 @@
                     <h1>Muzica:</h1>
                   </div>
                   <div class="modal-body" style="font-size: 24px;">
-                    <audio src="./music/Warsongs - Piercing Light (Mako Remix).mp3" controls autoplay muted></audio>
+                    <audio src="./music/Warsongs - Piercing Light (Mako Remix).mp3" controls autoplay></audio>
                   </div>
                   <div class="modal-footer">
-                    <input class="btn btn-primary" type="button" value="Close" data-dismiss="modal">
+                    <input class="btn-primary" type="button" value="Close" data-dismiss="modal">
                   </div>
                 </div>
               </div>
             </div>
-            <a href="#" data-toggle="modal" data-target="#myModal2">Muzica</a>
+            <a href="#" data-toggle="modal" data-target="#myModal2" class="navbutton">Muzica</a>
           </div>
         </div>
       </li>
-      <li>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="modal fade" id="myModal3">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content" style="background-color:black; color:white;">
-                  <div class="modal-header">
-                    <h1>Doneaza:</h1>
-                  </div>
-                  <div class="modal-body" style="font-size: 24px;">
-                    <script src="https://donately.com/script" donately-id="1234567" donately-key="key_123456789"></script>
-                  </div>
-                  <div class="modal-footer">
-                    <input class="btn btn-primary" type="button" value="Close" data-dismiss="modal">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a href="#" data-toggle="modal" data-target="#myModal3">Doneaza</a>
-          </div>
-        </div>
-      </li>
-      <li>
+      <li class="navitem">
         <div class="row">
           <div class="col-md-12">
             <div class="modal fade" id="myModal">
@@ -82,16 +60,17 @@
                     </p>
                   </div>
                   <div class="modal-footer">
-                    <input class="btn btn-primary" type="button" value="Close" data-dismiss="modal">
+                    <input class="btn-primary" type="button" value="Close" data-dismiss="modal">
                   </div>
                 </div>
               </div>
             </div>
-            <a href="#" data-toggle="modal" data-target="#myModal">Versiune Joc</a>
+            <a href="#" data-toggle="modal" data-target="#myModal" class="navbutton">Versiune Joc</a>
           </div>
         </div>
       </li>
-      <li><a href="./pages/despre.html">Despre</a></li>
+      <li class="navitem"><a href="./pages/despre.html" class="navbutton">Despre</a></li>
+      <li><h1 href="/menu.html"><button type="button" class="btn btn-danger"><a href="./menu.html">PLAY NOW</a></button></h1></li>
     </ul>
     <div class="titlu">
       <h1 class="pepin">Pepin</h1>
@@ -110,7 +89,6 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="./images/carouselimg.jpg" alt="Los Angeles">
               <div class="info">
                 <h1 class="infotitle">Ce este Pepin The Knight?</h1>
                 <h2 class="infotext">Este un joc de tip dungeon unde trebuie sa castigi diferite nivele. De-a lungul jocului
@@ -118,7 +96,6 @@
               </div>
             </div>
             <div class="item">
-              <img src="./images/carouselimg.jpg" alt="Chicago">
               <div class="info">
                 <h1 class="infotitle">De unde idea?</h1>
                 <h2 class="infotext">Pepin fiind un personaj curajos care se lupta in fiecare zi cu plictiseala ne-am gandit
@@ -127,7 +104,6 @@
             </div>
     
             <div class="item">
-              <img src="./images/carouselimg.jpg" alt="New york">
               <div class="info">
                 <h1 class="infotitle">Cum a fost creat?</h1>
                 <h2 class="infotext">Cu ajutorul HTML, CSS si JavaScript, a fost posibila crearea jocului. Desigur a fost
@@ -135,7 +111,6 @@
               </div>
             </div>
           </div>
-    
           <!-- Left and right controls -->
           <a class="left carousel-control" href="#info1" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
@@ -157,29 +132,25 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="./images/carouselimg.jpg" alt="Los Angeles">
               <div class="info">
-                <h1 class="infotitle">Ce este Pepin The Knight?</h1>
-                <h2 class="infotext">Este un joc de tip dungeon unde trebuie sa castigi diferite nivele. De-a lungul jocului
-                  vei parcurge o calatorie plina de suspans si aventura.</h2>
+                <h1 class="infotitle">De ce acest tip de joc?</h1>
+                <h2 class="infotext">Personal imi place tare mult tema medievala, 
+                  pasiune creata de serialul Game of Thrones si de cartea si filmele cu legenda Regelui Arthur 
+                  si de aceea am propus echipei sa folosim aceasta tematica. - Puya</h2>
               </div>
             </div>
     
             <div class="item">
-              <img src="./images/carouselimg.jpg" alt="Chicago">
               <div class="info">
-                <h1 class="infotitle">De unde idea?</h1>
-                <h2 class="infotext">Pepin fiind un personaj curajos care se lupta in fiecare zi cu plictiseala ne-am gandit
-                  sa il punem la o incercare putin mai grea prin diverse provocari.</h2>
+                <h1 class="infotitle">Cum a inceput totul?</h1>
+                <h2 class="infotext">Totul a inceput prin stabilirea rolurilor, fiecare stia ce are de facut de la bun inceput si asa am reusit sa terminam totul la timp si sa ne si iasa.</h2>
               </div>
             </div>
     
             <div class="item">
-              <img src="./images/carouselimg.jpg" alt="New york">
               <div class="info">
-                <h1 class="infotitle">Cum a fost creat?</h1>
-                <h2 class="infotext">Cu ajutorul HTML, CSS si JavaScript, a fost posibila crearea jocului. Desigur a fost
-                  nevoie si de creativitate, rabdare si putina distractie.</h2>
+                <h1 class="infotitle">Cat timp de lucru a necesitat proiectul?</h1>
+                <h2 class="infotext">Pai cam o luna, din ziua in care s-a anuntat proiectul ne-am organizat echipa si a urmat o perioada de 2-3 saptamani in care am urmarit tutoriale si cursuri online + recitirea materialelor de la cursurile de IT, iar in ultima saptamana si jumatate a inceput munca propriu-zisa.</h2>
               </div>
             </div>
           </div>

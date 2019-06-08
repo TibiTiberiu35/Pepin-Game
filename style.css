@@ -10,10 +10,18 @@
     overflow: hidden;
     background-color: #333;
     border: 2px solid black;
+    vertical-align: middle;
   }
   
-  .navbar li {
+  .navbar .navitem {
     float: right;
+    border: 2px solid black;
+  }
+  .navbar .btn {
+    float: right;
+    font-size: 33px;
+    margin-top: -18px;
+    margin-right: 10%;
     border: 2px solid black;
   }
   
@@ -27,7 +35,7 @@
     text-transform: uppercase;
   }
   
-  .navbar li a:hover {
+  .navbar li .navbutton:hover {
     background-color: rgb(87, 3, 3);
   }
 
@@ -44,7 +52,7 @@
     width: 50%;
     margin: 0 auto;
     font-family: Dungrg;
-    margin-top: 23rem;
+    margin-top: 10%;
   }
   
   .titlu .pepin{
@@ -65,18 +73,18 @@
   }
 
   #info1{
-    height: 55rem;
+    height: 78rem;
     width: 38rem;
     margin-left: 6rem;
 }
   #info2{
-    height: 55rem;
+    height: 78rem;
     width: 38rem;
     margin-left: 6rem;
 }
 
 .carousel-inner{
-  height: 55rem;
+  height: 78rem;
   width: 38rem;
 }
 
@@ -87,6 +95,10 @@
     font-size: 24px;
 }
 
+.btn btn-danger{
+    border: none;
+}
+
 
 
 .info .infotitle{
@@ -95,6 +107,11 @@
     font-size: 70px;
     text-shadow: 1px 1px 10px red, -1px -1px 10px red;
     margin-bottom: 7rem;
+}
+
+.carousel{
+  background-image: url("./images/carouselimg.jpg");
+  background-size: 100%;
 }
 
 .info .infotext{
@@ -140,13 +157,17 @@
 { 
   font-family: Dungrg; src: url('DUNGRG__.TTF'); 
 } 
-@media screen and (max-width : 1600px) { 
+@media screen and (max-width : 1601px) { 
   .titlu h1{ font-size: 20rem; }
   .navbar li a{
     font-size: 20px;
   }
+  .navbar .btn {
+    font-size: 28px;
+  }
   .bg1{
-    background-size: 100%;
+    background-image: none;
+    background-color: black;
   }
   body{
     margin:0;
@@ -158,12 +179,18 @@
   .navbar li a{
     font-size: 16px;
   }
+  .navbar .btn {
+    font-size: 22px;
+  }
 }
 
 @media screen and (max-width : 960px) { 
   .titlu h1{ font-size: 15rem; }
   .navbar li a{
     font-size: 12px;
+  }
+  .navbar .btn {
+    font-size: 16px;
   }
 }
 @media screen and (max-width : 830px) { 
@@ -182,14 +209,13 @@
     height: 80rem;
     width: 30rem;
   }
-  .carousel-inner img {
-    height: 80rem;
-    width: 30rem;
+  .carousel{
+    background-image: url("./images/carouselimg.jpg");
+    background-size: 100%;
   }
-  .carousel-inner{
-    height: 80rem;
-    width: 30rem;
-  }
+  .titlu .pepin{ font-size: 14rem; }
+  .titlu .theknight{ font-size: 14rem; }
+  .titlu{ margin-top: 25%; }
 
 }
 
@@ -202,31 +228,86 @@
     height: 60rem;
     width: 25rem;
   }
-  .carousel-inner img {
-    height: 60rem;
-    width: 25rem;
-    max-width:100%;
+  .carousel-inner{
+    background-image: url("./images/carouselimg.jpg");
+    background-size: 100%;
+  }
+  .info .infotitle{
+    font-size: 45px;
+  }
+  .info .infotext{
+    font-size: 24px;
   }
 
+
+}
+@media screen and (max-width : 565px) { 
+  #info1{
+    height: 60rem;
+    width: 20rem;
+  }
+  #info2{
+    height: 60rem;
+    width: 20rem;
+  }
   .carousel-inner{
-    height: 40rem;
-    width: 30rem;
+    background-image: url("./images/carouselimg.jpg");
+    background-size: 100%;
+  }
+  .info .infotitle{
+    font-size: 45px;
+  }
+  .info .infotext{
+    font-size: 24px;
   }
 
 }
 
 @media screen and (max-width : 480px) { 
   .titlu h1{ font-size: 6rem; }
+
   .navbar li a{
-    font-size: 5px;
+    font-size: 14px;
+    padding: 0;
   }
+  .navbar .btn {
+    font-size: 20px;
+    margin: 0px;
+    margin-right: 130px;
+  }
+}
+
+@media screen and (max-width : 420px) { 
   #info1{
-    height: 50rem;
-    width: 10rem;
+    height: 60rem;
+    width: 15rem;
   }
   #info2{
-    height: 50rem;
-    width: 10rem;
+    height: 60rem;
+    width: 15rem;
   }
-  
+  .carousel-inner{
+    background-image: url("./images/carouselimg.jpg");
+    background-size: 100%;
+  }
+  .info .infotitle{
+    font-size: 44px;
+  }
+  .info .infotext{
+    font-size: 20px;
+  }
+  .titlu .pepin{ font-size: 14rem; }
+  .titlu .theknight{ font-size: 14rem; }
+  .titlu{ margin-top: 20%; }
+  .navbar .btn {
+    font-size: 20px;
+    margin: 0px;
+    margin-right: 130px;
+  }
+  .navbar li a{
+    font-size: 15px;
+    margin-right: 7.4px;
+    padding: 0;
+  }
+
 }
